@@ -33,7 +33,7 @@ const questions = [
         type:'input',
         name:'License',
         message:'Please choose a license for your repo',
-        choice:['MIT License','IBM public license Versions','Mozilla public license 2.0','Apache License 2.0','The GPL License']
+        choice:['MIT License','IBM public license Versions','Mozilla public license 2.0','Apache License 2.0','Eclipse Public License 1.0']
     },
     {
         type:'input',
