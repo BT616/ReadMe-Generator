@@ -25,7 +25,7 @@ const questions = [
     },
     {
         type:'input',
-        name:'Project Descripton',
+        name:'Descripton',
         question:'Write a decription of your project',
 
     },////
