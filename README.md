@@ -9,9 +9,9 @@
   
   [Installation] #Installation
   [License]#License
-  [Usage]#usage
-  [Contribute]#contribute
-  [contact]#contact
+  [Usage]#Usage
+  [Contribute]#Contribute
+  [Contact]#Contact
 
   ---
 
