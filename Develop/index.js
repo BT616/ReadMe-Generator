@@ -10,50 +10,47 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [ 
     {
         type:'input',
-        name:'Username',
+        name:'username',
         question:'What is your Github username?',
     },
-    {
-        type:'input ',
-        name:'Repo',
-        question:'What is the name of your Github repo?',
-    },
+
     {
         type: 'input',
-        name:'Title',
+        name:'title',
         question:'What is the title of your project?',
     },
     {
         type:'input',
-        name:'Descripton',
+        name:'description',
         question:'Write a decription of your project',
 
     },////
     {
-        type:'input',
-        name:'License',
+        type:'list',
+        name:'license',
         message:'Please choose a license for your repo',
-        choice:['MIT License','IBM public license Versions','Mozilla public license 2.0','Apache License 2.0','Eclipse Public License 1.0']
+        choices:['MIT License','IBM public license Versions','Mozilla public license 2.0','Apache License 2.0','Eclipse Public License 1.0'],
+        dafault: 'MIT License'
     },
     {
         type:'input',
         message: 'Describe steps required to install your project',
-        name: 'Install'
+        name: 'installation'
     },
     {
         type:"input",
         message:'Provide instructions and examples of your project for usage section',
-        name: 'Usage',
+        name: 'usage',
     },
     {
         type:'input',
         message:'What command should be used to run test?',
-        name: 'Test',
+        name: 'test',
     },
     {
         type:'input',
         message: 'Provide guidlines on how other developers can contribute',
-        name: 'Contribute',
+        name: 'contribute',
     },
    
 ];

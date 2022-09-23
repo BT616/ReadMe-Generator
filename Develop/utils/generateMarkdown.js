@@ -8,13 +8,11 @@ function renderLicenseBadge(license) {
   } else if( license ==='Apache License 2.0'){
     return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]"
   } else if(license === 'Eclipse Public License 1.0'){
-    return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+    return "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]"
   }else if (license ==='IBM public license Versions'){
-  return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)"
-}
-}
-module.exports = renderLicenseBadge;
-
+  return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]"
+}else return "";
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -28,17 +26,25 @@ function renderLicenseLink(license) {
   else if (license === 'Apache License 2.0'){
     return "(https://opensource.org/licenses/Apache-2.0)"
   }
+  else if(license === 'Eclipse Public License 1.0'){
+    return "(https://opensource.org/licenses/EPL-1.0)"
+  }
+  else if (license ==='IBM public license Versions'){
+    return '(https://opensource.org/licenses/IPL-1.0)'
+  }else return "";
+};
 
-
-
-}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+const renderLicenseSection = renderLicenseBadge + renderLicenseLink;
+
+if (license === 'MIT License')
+return 
 
 
-}
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -46,7 +52,7 @@ function generateMarkdown(data) {
   
   # ${data.title}
 
-  ###Description
+  ##Description
   ${data.description}
 
   ### Table of Contents
@@ -57,15 +63,18 @@ function generateMarkdown(data) {
   [Contribute]#contribute
   [contact]#contact
 
+  ---
 
   ## Installation
 
   ${data.installation}
 
   ##License
-  ${data.license}
+  License for this ReadMe:${data.license}
+
 
   ## Usage
+  To use the app 
   ${data.usage}
 
   ## Contribute 
@@ -75,10 +84,10 @@ function generateMarkdown(data) {
   ${data.test}
 
   ##Contact 
-  ${data.github}
-  ${data.email}
+  ${data.username}
+ 
 
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown,renderLicenseBadge,renderLicenseLink;
