@@ -38,10 +38,6 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-const renderLicenseSection = renderLicenseBadge + renderLicenseLink;
-
-if (license === 'MIT License')
-return 
 
 
 };
@@ -70,7 +66,8 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ##License
-  License for this ReadMe:${data.license}
+  License for this ReadMe:
+   ${data.license}
 
 
   ## Usage
