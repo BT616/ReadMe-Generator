@@ -25,8 +25,8 @@
 
 
   ## Usage
-  <iframe src="https://drive.google.com/file/d/1kQNx9PAAzDceyM3ZYT112Hkloi9Z_S0w/preview" width="640" height="480"></iframe>
-  
+ [
+](https://drive.google.com/file/d/1kQNx9PAAzDceyM3ZYT112Hkloi9Z_S0w/view)  
   
   To use the app 
   run node index.js 
