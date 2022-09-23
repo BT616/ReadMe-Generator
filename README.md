@@ -25,7 +25,7 @@
 
 
   ## Usage
-[https://drive.google.com/file/d/1kQNx9PAAzDceyM3ZYT112Hkloi9Z_S0w/view] 
+https://drive.google.com/file/d/1kQNx9PAAzDceyM3ZYT112Hkloi9Z_S0w/view
   
   To use the app 
   run node index.js 
