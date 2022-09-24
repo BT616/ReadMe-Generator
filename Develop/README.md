@@ -19,10 +19,15 @@
 
   
 
-  ##License
-  [![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg) 
-  (https://opensource.org/licenses/IPL-1.0)
-   MIT License
+
+  MIT License
+  
+
+ ##License
+ [![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)(https://opensource.org/licenses/MIT)
+
+
+
 
 
   ## Usage

@@ -3,14 +3,14 @@
 function renderLicenseBadge(license) {
 
   let badge ="";
-if (license ='MIT License'){
-  badge = `[![License](https://img.shields.io/badge/license-${license}-yellow)`;
-}if (license ='Apache License 2.0'){
+if (license = 'MIT License'){
+  badge =`[![License](https://img.shields.io/badge/license-MIT-yellow.svg)`;
+} if (license ='Apache License 2.0'){
   badge = `[![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)`;
-}if (license ='IBM public license Versions'){
+}else if (license ='IBM public license Versions'){
   badge = `[![License](https://img.shields.io/badge/License-IPL_1.0-blue.svg)`;
-}if (license ='Mozilla public license 2.0'){
-  badge = `[![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
+}else if (license ='Mozilla public license 2.0'){
+  return `[![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
 }else return "";
 return badge;
 }
@@ -22,16 +22,16 @@ return badge;
 function renderLicenseLink(license) {
 
   let currentLink ="";
-  if( license = 'MIT License'){
+  if( license ='MIT License'){
     currentLink= "(https://opensource.org/licenses/MIT)";
-  }
-  if (license ='Mozilla public license 2.0'){
-    currentLink= "(https://opensource.org/licenses/MPL-2.0)";
-  }
-  if (license = 'Apache License 2.0'){
+  } 
+  else if (license ='Mozilla public license 2.0'){
+    currentLink="(https://opensource.org/licenses/MPL-2.0)";
+  } 
+  else if (license = 'Apache License 2.0'){
     currentLink="(https://opensource.org/licenses/Apache-2.0)";
   }
-  if (license ='IBM public license Versions'){
+  else if (license ='IBM public license Versions'){
     currentLink='(https://opensource.org/licenses/IPL-1.0)';
   }else return "";
   return currentLink;
@@ -39,6 +39,14 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+ return `
+
+ ##License
+ ${renderLicenseBadge()}${renderLicenseLink()}
+
+
+`
+
 }
 
 
@@ -65,10 +73,9 @@ function generateMarkdown(data) {
 
   ${data.installation}
 
-  ##License
-  ${renderLicenseBadge()}  ${renderLicenseLink()}
- 
-   ${data.license}
+
+  ${data.license}
+  ${renderLicenseSection()}
 
 
   ## Usage
