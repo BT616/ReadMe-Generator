@@ -19,23 +19,23 @@ return badge;
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
- 
-  // } 
-  // else if (license ==='Mozilla public license 2.0'){
-  //   return "(https://opensource.org/licenses/MPL-2.0)"
-  // }
-  // else if (license === 'Apache License 2.0'){
-  //   return "(https://opensource.org/licenses/Apache-2.0)"
-  // }
-  // else if(license === 'Eclipse Public License 1.0'){
-  //   return "(https://opensource.org/licenses/EPL-1.0)"
-  // }
-  // else if (license ==='IBM public license Versions'){
-  //   return '(https://opensource.org/licenses/IPL-1.0)'
-  // }else "";
- 
+function renderLicenseLink(license) {
 
+  let currentLink ="";
+  if( license = 'MIT License'){
+    currentLink= "(https://opensource.org/licenses/MIT)";
+  }
+  if (license ='Mozilla public license 2.0'){
+    currentLink= "(https://opensource.org/licenses/MPL-2.0)";
+  }
+  if (license = 'Apache License 2.0'){
+    currentLink="(https://opensource.org/licenses/Apache-2.0)";
+  }
+  if (license ='IBM public license Versions'){
+    currentLink='(https://opensource.org/licenses/IPL-1.0)';
+  }else return "";
+  return currentLink;
+}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
@@ -66,8 +66,8 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ##License
-  ${renderLicenseBadge()} 
-  ${renderLicenseLink()}
+  ${renderLicenseBadge()}  ${renderLicenseLink()}
+ 
    ${data.license}
 
 
