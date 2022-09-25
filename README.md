@@ -35,7 +35,7 @@
   run node index.js 
 
   ## Contribute 
-  fork the repo, contact me with any queestions
+  fork the repo, contact me with any questions
 
   ## Test 
   node index.js
