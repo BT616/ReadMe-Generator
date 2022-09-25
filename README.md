@@ -20,8 +20,12 @@
   first git clone the repo, make sure you have node.js installed, then make sure you have inquirer installed as well.
 
   ## License
+
   License for this ReadMe:
   MIT License
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 
   ## Usage
