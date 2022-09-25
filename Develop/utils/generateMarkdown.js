@@ -2,18 +2,23 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
-  let badge ="";
-if (license = 'MIT License'){
-  badge =`[![License](https://img.shields.io/badge/license-MIT-yellow.svg)`;
-} if (license ='Apache License 2.0'){
-  badge = `[![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)`;
-}else if (license ='IBM public license Versions'){
-  badge = `[![License](https://img.shields.io/badge/License-IPL_1.0-blue.svg)`;
-}else if (license ='Mozilla public license 2.0'){
-  return `[![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
-}else return "";
-return badge;
+  return  "[![License](https://img.shields.io/badge/license-" + license + "-blue.svg)";
+
+
 }
+
+
+//   let badge ="";
+
+// if (license === "MIT"){
+//   badge =`[![License](https://img.shields.io/badge/license-MIT-yellow.svg)`;
+// } else if (license ===`Apache`){
+//   badge = `[![License](https://img.shields.io/badge/license-Apache-blue.svg)`;
+// }else if (license ==='MPL'){
+//   badge=`[![License](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
+// }else return "";
+// return badge;
+
 
 
 
@@ -21,40 +26,39 @@ return badge;
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 
-  let currentLink ="";
-  if( license ='MIT License'){
-    currentLink= "(https://opensource.org/licenses/MIT)";
+  let licenseLink =""
+
+  if( license ==='MIT'){
+    return "(https://opensource.org/licenses/MIT)"
   } 
-  else if (license ='Mozilla public license 2.0'){
-    currentLink="(https://opensource.org/licenses/MPL-2.0)";
+  else if (license ==='MPL'){
+    return"(https://opensource.org/licenses/MPL-2.0)"
   } 
-  else if (license = 'Apache License 2.0'){
-    currentLink="(https://opensource.org/licenses/Apache-2.0)";
+  else if (license === 'Apache'){
+   return"(https://opensource.org/licenses/Apache-2.0)"
   }
-  else if (license ='IBM public license Versions'){
-    currentLink='(https://opensource.org/licenses/IPL-1.0)';
-  }else return "";
-  return currentLink;
+ return licenseLink;
+
 }
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
  return `
 
  ##License
- ${renderLicenseBadge()}${renderLicenseLink()}
-
+ ${renderLicenseBadge(license)}${renderLicenseLink(license)}
 
 `
-
 }
 
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data) { 
+  
   return `
   
-  # ${data.title}
+  # ${data.title} 
 
   ##Description
   ${data.description}
@@ -75,7 +79,7 @@ function generateMarkdown(data) {
 
 
   ${data.license}
-  ${renderLicenseSection()}
+  ${renderLicenseSection(data.license)}
 
 
   ## Usage
@@ -95,4 +99,4 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown,renderLicenseBadge,renderLicenseLink,renderLicenseSection;
+module.exports = generateMarkdown;
