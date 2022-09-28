@@ -46,7 +46,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
  return `
 
- ##License
+ ## License
  ${renderLicenseBadge(license)}${renderLicenseLink(license)}
 
 `
@@ -76,6 +76,8 @@ function generateMarkdown(data) {
   ## Installation
 
   ${data.installation}
+
+
 
 
   ${data.license}
