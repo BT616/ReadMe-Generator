@@ -60,16 +60,16 @@ function generateMarkdown(data) {
   
   # ${data.title} 
 
-  ##Description
+  ## Description
   ${data.description}
 
   ### Table of Contents
   
-  *[Installation]#Installation
-  *[License]#License
-  *[Usage]#usage
-  *[Contribute]#contribute
-  *[contact]#contact
+  * [Installation](#Installation)
+  * [License](#License)
+  * [Usage](#Usage)
+  * [Contribute](#Contribute)
+  * [Contact](#Contact)
 
   ---
 
@@ -89,10 +89,10 @@ function generateMarkdown(data) {
   ## Contribute 
   ${data.contribute}
 
-  ##Test 
+  ## Test 
   ${data.test}
 
-  ##Contact 
+  ## Contact 
   ${data.username}
  
 
