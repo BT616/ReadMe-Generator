@@ -54,6 +54,11 @@ const questions = [
         message: 'Provide guidlines on how other developers can contribute',
         name: 'contribute',
     },
+    {
+        type:'input',
+        message: 'please provide your email',
+        name: 'email',
+    },
    
 ];
 

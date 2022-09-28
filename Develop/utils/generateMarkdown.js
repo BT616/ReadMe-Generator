@@ -94,7 +94,7 @@ function generateMarkdown(data) {
 
   ## Contact 
   ${data.username}
- 
+  ${data.email}
 
 `;
 }
